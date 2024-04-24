@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+	
+	</h:head>
+	
+	<h:body  style="background-color:#7FB3D5;">
+
+  <div id="container"  style="margin-top:20px; margin-left:300px ; border:5px solid green; width:500px; background-color:#FCF3CF ;">
+   <h:form style="margin-left:100px;  width:600px;">
+   
+   <div class="col-sm-6">
+    <label for="id" class="form-label">Tax Filer Id</label>
+    
+    <h:inputText id="id"  class="form-control"  value="#{rec_to_edit.filerID}" />
+  </div>
+   
+  <div class="col-sm-6">
+    <label for="name" class="form-label">Name</label>
+    
+    <h:inputText id="name"  class="form-control"  value="#{rec_to_edit.name}" />
+  </div>
+  
+  <div class="col-sm-6">
+    <label for="con" class="form-label">Contact</label>
+    
+    <h:inputText id="con"  class="form-control"  value="#{rec_to_edit.contact}" />
+  </div>
+  
+  <div class="col-sm-6">
+    <label for="income" class="form-label">Annual Income</label>
+    
+    <h:inputText id="income"  class="form-control"  value="#{rec_to_edit.annualIncome}" />
+  </div>
+  
+  <div class="col-sm-6">
+    <label for="expense" class="form-label">Expenses</label>
+    
+    <h:inputText id="expense"  class="form-control"  value="#{rec_to_edit.expenses}" />
+  </div>
+  
+  <div class="col-sm-6">
+    <label for="year" class="form-label">Tax Year</label>
+    
+    <h:inputText id="year"  class="form-control"  value="#{rec_to_edit.taxYear}" />
+  </div>
+  
+  <div class="col-sm-6">
+    <label for="date" class="form-label">Date Filed</label>
+    
+    <h:inputText id="date"  class="form-control"  value="#{rec_to_edit.dateFiled}" />
+    	<f:convertDateTime pattern="yyyy-MM-dd" />
+  </div>   
+  
+    <h:commandButton style="margin-top:50px;" action="#{ctlr.updateTaxRec(rec_to_edit)}"  value="Update Tax Filer Record"></h:commandButton>
+   </h:form>
+   
+   </div>
+   </h:body>
+</html>
